@@ -1,5 +1,15 @@
 # Restore an Obsidian replica
-// Prepare tooling once; enroll and validate each independent task replica.
+
+This is the authoritative operational guide for **dotbox-sync**. Start with
+[Context Is Key (CIK), the official stage 1 bootloader](https://github.com/globo-gobo-99/context-is-key/blob/main/START.md)
+for orientation; CIK hands off here for setup, sync, and recovery.
+
+The commands and tests below belong to a dotbox-sync checkout, not CIK.
+The established deployment path is `/workspace/dot-box`; relative commands run
+from the dotbox-sync repository root. See the [tooling overview](README.md) for
+deployment guidance.
+
+Prepare tooling once; enroll and validate each independent task replica.
 
 ```bash
 python3 /workspace/dot-box/bootstrap-vault.py --install-only
@@ -57,8 +67,9 @@ through the child environment into JS argv, rather than the OS command line.
 ## Codex Cloud setup
 // Published tooling and task-specific enrollment have different lifetimes.
 
-Prepare Node, this repository and `--install-only` in the reusable setup.
-Use the tested bootstrap in the Start skill with selected personal inputs.
+Prepare Node, this dotbox-sync repository and `--install-only` in the reusable setup.
+Use CIK's stage 1 entrypoint to find this guide, then use the tested bootstrap
+in the Start skill with selected personal inputs.
 Publish/republish in the environment UI, then validate a fresh task. Do not
 publish a live personal replica, credentials, Sync database or derived keys.
 The script does not register an OS boot hook. Repository refresh does not rerun
