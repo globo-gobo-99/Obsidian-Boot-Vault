@@ -13,7 +13,7 @@ Versioned agent bootstrap procedures and tools for accessing an **existing** Obs
 
 ## Delivery status
 
-The existing GitHub repository has been renamed from `dotbox-sync` to `Obsidian-Boot-Vault`. These changes are published on a review branch, not installed or merged into the default branch. Legacy `dot-box` filesystem/state names remain compatibility paths. No service, startup hook or credentials are installed by this repository.
+The existing GitHub repository has been renamed from `dotbox-sync` to `Obsidian-Boot-Vault`. The reviewed bootstrap is promoted to the default branch. Installation is an explicit machine-level operation; publishing this repository does not install it anywhere. Legacy `dot-box` filesystem/state names remain compatibility paths. No service, startup hook or credentials are installed by this repository.
 
 ## Verification
 

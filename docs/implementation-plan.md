@@ -55,4 +55,4 @@
 - [x] Document promotion order, remote rename, native pilot and rollback approvals.
 - [x] Run full tests, diff checks and fresh-context final review; fix substantive findings with regression tests.
 
-The local-review phase is complete. The human subsequently approved the existing-repository rename, candidate commits and review-branch pushes. Merging and startup installation remain separate checkpoints. Fixture commits are temporary isolated test data only.
+The local-review phase is complete. The human subsequently approved the existing-repository rename, candidate commits and review-branch pushes. The human subsequently approved default-branch promotion, dex-box startup installation and fresh-session verification; live vault bindings/credentials remain unchanged. Fixture commits are temporary isolated test data only.

@@ -5,7 +5,7 @@ Templates and synthetic evidence; neither is an installed or verified live confi
 - [Source selection](source.example.json) — Explicit approved revision selection.
 - [Readiness evidence](readiness.example.json) — Synthetic gate input for reference.
 
-The source example intentionally contains invalid SHA placeholders: commit/review/publish candidates first, then supply their exact approved revisions outside the repo. The existing GitHub repository is now named Obsidian-Boot-Vault. Review branches remain distinct from an installed/default-branch release. No passwords, tokens or encryption keys belong in either document.
+The source example intentionally contains invalid SHA placeholders: commit/review/publish candidates first, then supply their exact approved revisions outside the repo. The existing GitHub repository is now named Obsidian-Boot-Vault. Default-branch promotion and machine installation are distinct operations; use only explicitly approved committed revisions. No passwords, tokens or encryption keys belong in either document.
 
 The seven-day cache age is a proposed explicit policy. `--allow-cached` permits eligible fallback; `--offline --allow-cached` deliberately avoids retrieval. Neither permits unapproved revisions or proves vault freshness. A local absolute mirror path is supported when deliberately selected by the human; it does not prove GitHub currency.
 
