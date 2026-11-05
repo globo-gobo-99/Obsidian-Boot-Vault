@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "offline_max_age_seconds": 604800,
+  "sources": [
+    {
+      "name": "cik",
+      "repository": "https://github.com/globo-gobo-99/context-is-key.git",
+      "ref": "refs/heads/main",
+      "approved_sha": "REPLACE_WITH_REVIEWED_CIK_COMMIT_SHA",
+      "entry": "START.md"
+    },
+    {
+      "name": "obv",
+      "repository": "https://github.com/globo-gobo-99/Obsidian-Boot-Vault.git",
+      "ref": "refs/heads/main",
+      "approved_sha": "REPLACE_WITH_REVIEWED_OBV_COMMIT_SHA",
+      "entry": "START.md"
+    }
+  ]
+}

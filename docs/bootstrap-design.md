@@ -1,0 +1,13 @@
+# Reusable agent bootstrap design
+
+Approved direction: CIK is the stage 1 entry; Obsidian-Boot-Vault (OBV) owns procedures and tooling. GitHub transports instructions, never vault contents. Native Obsidian Sync remains the vault transport. The first delivery prepared local reviewable changes and isolated tests. The human subsequently approved renaming the existing repository, committing the candidates and pushing both review branches. Installed startup changes, live Sync changes, enrollment and merging remain outside this publication step.
+
+Stage 0 is a small native agent instruction plus a locally reviewed Python/Git acquisition helper. A human-owned source configuration pins CIK and OBV independently, including repository, approved requested ref, approved SHA and entry file. Prepare all sources in clean read-only snapshots from Git objects, ignoring maintained-checkout edits. Emit a unique session receipt; never use a shared mutable latest pointer. Cache evidence is checked independently of vault evidence.
+
+The portable stage 1 contract defines prerequisite ownership, single-writer discovery, identity and remote access, required-file/selective-sync checks, initial completion, ongoing health, pending changes and conflicts. Machine adapters supply paths/services; the dex-box adapter selects existing DevPod-Vault 6ced867ab480ebf9acbc2f5f51c74007 at /workspace/DevPod-Vault. Secrets stay in supported local credential stores; humans enter account/MFA/E2EE credentials in uncaptured host terminals. No token copying or automatic recovery mutations.
+
+Explicit SHA promotion controls updates. New sessions use newly approved pins; active/resumed sessions retain their receipt. Offline fallback must be explicitly enabled and time-bounded, match every source identity/pin, and pass complete snapshot validation. Cache use does not renew online verification time. Wrong identities, missing required context, incomplete initial sync, unresolved task conflicts and pending transfers block edits. Unknown remote freshness permits only qualified local read-only work.
+
+Migration is additive. Preserve originals, native hooks, legacy tool/state paths and local changes; retire duplicates only after a native fresh-session pilot and explicit approval. Restore prior native entry/source pins for rollback; never rewind the vault. Repository rename and old-link updates are a separate publish checkpoint.
+
+See [implementation plan](implementation-plan.md), [portable contract](../START.md), and [acceptance matrix](acceptance.md).

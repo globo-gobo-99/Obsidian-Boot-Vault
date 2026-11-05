@@ -1,24 +1,32 @@
-# dotbox-sync
+# Obsidian-Boot-Vault (OBV)
 
-Small explicit tools for one Obsidian replica per cloud workspace.
+Versioned agent bootstrap procedures and tools for accessing an **existing** Obsidian Sync vault. Vault contents and credentials never belong in this repository.
 
-## Relationship to CIK
+- [Start](START.md) — Portable stage 1 operational contract.
+- [Adapters](adapters/README.md) — Native entry and host mappings.
+- [Design and migration](docs/README.md) — Decisions, acceptance and rollback.
+- [Examples](examples/README.md) — Human-owned configuration templates.
+- [Snapshot helper](agent-bootstrap.py) — Approved committed instruction snapshots.
+- [Readiness evaluator](vault-readiness.py) — Conservative evidence-based task gate.
 
-[Context Is Key (CIK)](https://github.com/globo-gobo-99/context-is-key/blob/main/START.md)
-is the official **stage 1 bootloader** and starting point for a fresh task.
-It provides orientation and hands off to this repository. dotbox-sync owns the
-implementation and the authoritative [bootstrap and environment contract](START.md).
-Keep setup, configuration, sync, recovery, and verification instructions here
-rather than duplicating them in CIK.
+[Context Is Key](https://github.com/globo-gobo-99/context-is-key) (CIK) owns the stage 1 entrypoint and handoff. OBV owns operational requirements, recovery and tools. Runtime handoffs use the **session receipt's pinned OBV snapshot**, never a moving web link or a dirty maintained checkout.
 
-## Tools and deployment
+## Delivery status
 
-- [Bootstrap and environment contract](START.md): setup, inputs, safety, sync commands, and verification.
-- `bootstrap-vault.py`: tooling preparation and replica bootstrap.
-- `single-sync.py`: a one-pass fallback; defers to an existing healthy writer.
-- `continuous-sync.py`: a foreground reconnecting supervisor with status/stop commands.
-- `boop.py`: optional manual Rootshell notification adapter, requiring vendor installation and pairing.
+The existing GitHub repository has been renamed from `dotbox-sync` to `Obsidian-Boot-Vault`. These changes are published on a review branch, not installed or merged into the default branch. Legacy `dot-box` filesystem/state names remain compatibility paths. No service, startup hook or credentials are installed by this repository.
 
-Deploy these files together at `/workspace/dot-box`, or run the Python entrypoints from another checkout. The shell helper targets the established `/workspace/dot-box` path. Keep auth state and private inputs outside the repository. No boot hook or notification pairing is installed automatically.
+## Verification
 
-For the test command, see [Verification](START.md#verification).
+Python 3.11+, Git, and Node for the existing bootstrap bridge test:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Tests use temporary repositories, synthetic evidence and fake clients; they do not sync a live vault. Native agent instruction loading and live provider delivery are separate, approval-gated acceptance tests.
+
+## Existing cloud tools
+
+`bootstrap-vault.py`, `single-sync.py`, `continuous-sync.py`, and `sync-vault.sh` remain available for previously commissioned cloud deployments. They can install tools, enroll, change settings or transfer files. They are **not** stage 0 and are **not the dex-box adapter**. Their legacy paths, environment contract and behavior are preserved in [the cloud guide](docs/legacy-cloud.md); reading that guide does not authorize execution.
+
+`boop.py` remains an optional explicitly paired notifier, unrelated to bootstrap readiness. No notifications are part of startup.

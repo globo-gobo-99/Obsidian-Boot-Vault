@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "instructions": {
+    "snapshot_verified": true,
+    "approved": true,
+    "remote_verified": true,
+    "cache_allowed": false,
+    "cache_within_policy": false
+  },
+  "vault": {
+    "expected_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "bound_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "expected_path": "/synthetic/replica",
+    "bound_path": "/synthetic/replica",
+    "remote_visible": true,
+    "owner_count": 1,
+    "owner_running": true,
+    "initial_sync_complete": true,
+    "required_files_present": true,
+    "selective_sync_covers_required": true,
+    "conflicts_checked": true,
+    "conflicts": false,
+    "pending_changes_checked": true,
+    "pending_changes": false,
+    "last_complete_at": "2000-01-01T00:00:00+00:00",
+    "last_change_at": null,
+    "last_failure_at": null,
+    "health_checked_at": "2000-01-01T00:00:00+00:00",
+    "max_evidence_age_seconds": 300
+  }
+}
